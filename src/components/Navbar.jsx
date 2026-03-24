@@ -132,8 +132,8 @@ const Navbar = () => {
           <div className="absolute top-[-20%] right-[-20%] w-[400px] h-[400px] bg-[radial-gradient(circle,_var(--color-tertiary-container-val)_0%,_transparent_70%)] opacity-20 pointer-events-none"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-[radial-gradient(circle,_var(--color-secondary-container-val)_0%,_transparent_70%)] opacity-15 pointer-events-none"></div>
 
-          {/* Nav links — centered vertically */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-6 px-8 pt-20">
+          {/* Nav links — top-left aligned */}
+          <div className="flex-1 flex flex-col items-start justify-start gap-5 px-8 pt-24">
             {links.map((link) => {
               const isActive = location.pathname === link.path;
               return (
