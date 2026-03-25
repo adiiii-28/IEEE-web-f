@@ -9,6 +9,7 @@ import Members from './pages/Members';
 import Events from './pages/Events';
 import GalleryPage from './pages/Gallery';
 import Contact from './pages/Contact';
+import Abhivyakti from './pages/Abhivyakti';
 
 function PageTransition({ children }) {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/abhivyakti" element={<Abhivyakti />} />
           </Routes>
         </PageTransition>
       </main>

@@ -7,14 +7,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Members = () => {
   const headerRef = useRef(null);
+  const alumniHeaderRef = useRef(null);
 
   const members = [
+    { name: "Pranjal Bhattacharya", role: "Chair Person" },
+    { name: "Somanath Mahto", role: "Vice Chair Person" },
+    { name: "Harishta Chaubey", role: "Secretary" },
+    { name: "Rajdeep Das", role: "Co Secretary" },
+    { name: "Md Mehran Ansari", role: "Webmaster" },
+    { name: "Aayush Arya", role: "Co Webmaster" },
+    { name: "Ronak Sharma", role: "Treasurer" },
+    { name: "Sahil Gurg", role: "Co Treasurer" }
+  ];
+
+  const alumni = [
     { name: "Arnav Shivam", role: "Chair Person" },
     { name: "Sneha Sharma", role: "Vice Chair Person" },
     { name: "Asman Kumari", role: "Secretary" },
     { name: "Syed Fahad Ahmed", role: "Treasurer" },
     { name: "Pushkar Kumar", role: "Technical Coordinator" },
-    { name: "Md Mehran Ansari", role: "Webmaster" },
     { name: "Meenakshi Sinha", role: "Design & Editing Coordinator" }
   ];
 
@@ -23,8 +34,6 @@ const Members = () => {
       // Hero split-text
       const h1 = headerRef.current?.querySelector('.members-title');
       if (h1) {
-        const original = h1.innerHTML;
-        // Split only the text node parts, keep <span> and <br> as-is
         const text = h1.textContent;
         h1.innerHTML = text.replace(/\S+/g, '<span class="mem-word inline-block">$&</span>');
         gsap.fromTo('.mem-word',
@@ -37,11 +46,20 @@ const Members = () => {
         { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.5 }
       );
 
-      // Empty state
-      gsap.fromTo('.empty-state',
-        { y: 60, opacity: 0, scale: 0.95 },
-        { y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power3.out',
-          scrollTrigger: { trigger: '.empty-state', start: 'top 85%' }
+      // Alumni section header animation
+      const alumniTitle = alumniHeaderRef.current?.querySelector('.alumni-title');
+      if (alumniTitle) {
+        gsap.fromTo(alumniTitle,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
+            scrollTrigger: { trigger: alumniTitle, start: 'top 85%' }
+          }
+        );
+      }
+      gsap.fromTo('.alumni-desc',
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.alumni-desc', start: 'top 85%' }
         }
       );
     });
@@ -60,7 +78,7 @@ const Members = () => {
         </p>
       </header>
 
-      {/* Member Grid — flex-wrap so partial rows auto-center */}
+      {/* Current Member Grid */}
       <div className="flex flex-wrap justify-center gap-4 md:gap-8">
         {members.map((member, index) => (
           <div key={index} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-[160px] max-w-xs flex-shrink-0">
@@ -69,17 +87,24 @@ const Members = () => {
         ))}
       </div>
 
-      {/* Empty State / Placeholder */}
-      <div className="empty-state mt-24 p-12 rounded-lg bg-surface-container-low/50 border border-outline-variant/10 flex flex-col items-center text-center hover:border-tertiary/20 transition-colors duration-500">
-        <div className="w-20 h-20 mb-6 bg-primary-container rounded-2xl flex items-center justify-center animate-pulse">
-          <span className="material-symbols-outlined text-4xl text-tertiary">groups</span>
+      {/* Alumni Section */}
+      <section className="mt-24 md:mt-32">
+        <header ref={alumniHeaderRef} className="mb-12 md:mb-16">
+          <h2 className="alumni-title text-3xl md:text-5xl font-bold tracking-[-0.02em] text-on-surface-variant/70 mb-4 uppercase leading-tight">
+            Alumni
+          </h2>
+          <p className="alumni-desc text-on-surface-variant/50 text-base md:text-lg max-w-2xl font-light leading-relaxed opacity-0">
+            Former executive committee members who laid the foundation of our student branch.
+          </p>
+        </header>
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+          {alumni.map((member, index) => (
+            <div key={index} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-[160px] max-w-xs flex-shrink-0 opacity-75 hover:opacity-100 transition-opacity">
+              <MemberCard name={member.name} role={member.role} index={index} />
+            </div>
+          ))}
         </div>
-        <h3 className="text-2xl font-bold text-on-surface mb-2">Expanding the Frontier</h3>
-        <p className="text-on-surface-variant max-w-md">Our recruitment process for specialized sub-teams is currently active. New members will be featured here shortly.</p>
-        <button className="mt-8 text-on-surface font-medium underline underline-offset-8 decoration-tertiary hover:text-tertiary transition-all">
-          View Open Positions
-        </button>
-      </div>
+      </section>
     </main>
   );
 };

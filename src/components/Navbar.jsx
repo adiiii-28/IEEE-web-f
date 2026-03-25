@@ -57,6 +57,7 @@ const Navbar = () => {
     { name: 'Home', path: '/', icon: 'home' },
     { name: 'Members', path: '/members', icon: 'groups' },
     { name: 'Events', path: '/events', icon: 'event' },
+    { name: 'Abhivyakti', path: '/abhivyakti', icon: 'celebration' },
     { name: 'Gallery', path: '/gallery', icon: 'photo_library' },
     { name: 'Contact', path: '/contact', icon: 'mail' },
   ];

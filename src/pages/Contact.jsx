@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const pageRef = useRef(null);
+  const [showQR, setShowQR] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -53,6 +54,7 @@ const Contact = () => {
   }, []);
 
   return (
+    <>
     <main ref={pageRef} className="relative min-h-screen pt-24 pb-24 overflow-hidden" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(60, 215, 255, 0.05) 1px, transparent 0)', backgroundSize: '40px 40px' }}>
       {/* Hero Section / Title */}
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -92,7 +94,7 @@ const Contact = () => {
         <div className="contact-right flex flex-col space-y-8 mt-4">
           
           {/* Map Placeholder */}
-          <div className="map-container relative w-full h-[280px] rounded-lg overflow-hidden group">
+          <a href="https://maps.google.com/?q=Bihar+Institute+of+Technology+Patna" target="_blank" rel="noopener noreferrer" className="map-container relative w-full h-[280px] rounded-lg overflow-hidden group block cursor-pointer">
             <div className="absolute inset-0 bg-surface-container-highest animate-pulse"></div>
             <img alt="Location Map" className="map-img w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwORt6eRH4HKk1bX6G_-BZS7kGFA5GaU1Sda8yRU2qgy4gZirOdG4dPLc5sU66CnEDcu31ToAtzjgW1jByJnIrAXkmPlKKbKXf_rXYJqHOKIE5lLSIFFYfpux1HW8WMk28uGfQffhsSOc2HiwWbt6oLAvmJwUTkIDfHNjyyqWYAkXYbMJ_6nvUSsR1KLC2CZLDCsyXdQaz-LfcyCmXYAjEV2_qBoNXtLbnoaP1dmgkKdo1__xxEY8JeM0SXhDSlzSlbeGBh0PW4q22"/>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
@@ -105,20 +107,20 @@ const Contact = () => {
                 <p className="font-semibold text-sm">BIT Patna, Bihar, IN</p>
               </div>
             </div>
-          </div>
+          </a>
 
           <div className="info-grid grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="info-card glass-panel p-6 rounded-lg border border-white/5 hover:border-tertiary/30 hover:-translate-y-1 transition-all duration-300 group">
+            <a href="mailto:ieeebitp@gmail.com" className="info-card glass-panel p-6 rounded-lg border border-white/5 hover:border-tertiary/30 hover:-translate-y-1 transition-all duration-300 group block">
               <span className="material-symbols-outlined text-tertiary mb-3 block group-hover:scale-110 transition-transform">mail</span>
               <h4 className="font-label text-xs uppercase tracking-widest font-medium text-on-surface-variant mb-1">Email Us</h4>
               <p className="text-on-surface font-medium text-sm">ieeebitp@gmail.com</p>
-            </div>
+            </a>
             
-            <div className="info-card glass-panel p-6 rounded-lg border border-white/5 hover:border-tertiary/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center group">
+            <a href="tel:+916122273615" className="info-card glass-panel p-6 rounded-lg border border-white/5 hover:border-tertiary/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center group block">
               <span className="material-symbols-outlined text-tertiary mb-3 block group-hover:scale-110 transition-transform">phone</span>
               <h4 className="font-label text-xs uppercase tracking-widest font-medium text-on-surface-variant mb-1">Call Us</h4>
               <p className="text-on-surface font-medium text-sm">+91 612 2273615</p>
-            </div>
+            </a>
 
             <div className="info-card md:col-span-2 glass-panel p-6 rounded-lg border border-white/5 hover:border-tertiary/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center group">
               <h4 className="font-label text-xs uppercase tracking-widest font-medium text-on-surface-variant mb-2">Address</h4>
@@ -133,25 +135,41 @@ const Contact = () => {
               <div>
                 <h4 className="font-label text-xs uppercase tracking-widest font-medium text-on-surface-variant mb-1">Follow the Innovation</h4>
                 <div className="flex space-x-4 mt-2">
-                  <a href="#" className="text-on-surface-variant hover:text-tertiary hover:scale-125 transition-all">
+                  <a href="https://www.ieee.org" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-tertiary hover:scale-125 transition-all">
                     <span className="material-symbols-outlined">public</span>
                   </a>
-                  <a href="#" className="text-on-surface-variant hover:text-tertiary hover:scale-125 transition-all">
+                  <a href="https://www.linkedin.com/company/ieee-student-branch-bit-patna/" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-tertiary hover:scale-125 transition-all">
                     <span className="material-symbols-outlined">groups</span>
                   </a>
-                  <a href="#" className="text-on-surface-variant hover:text-tertiary hover:scale-125 transition-all">
+                  <a href="https://www.instagram.com/ieee_bitpatna/" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-tertiary hover:scale-125 transition-all">
                     <span className="material-symbols-outlined">share</span>
                   </a>
                 </div>
               </div>
-              <div className="bg-surface-container-highest p-4 rounded-xl group-hover:scale-110 transition-transform">
+              <button type="button" onClick={(e) => { e.stopPropagation(); setShowQR(true); }} className="relative z-10 bg-surface-container-highest p-4 rounded-xl hover:scale-110 transition-transform cursor-pointer">
                 <span className="material-symbols-outlined text-tertiary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>qr_code_2</span>
-              </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+      {/* Linktree QR Popup */}
+      {showQR && (
+        <div className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setShowQR(false)}>
+          <div className="relative max-w-sm w-full bg-surface-container-low rounded-2xl overflow-hidden shadow-2xl border border-outline-variant/20 animate-[scaleIn_0.3s_ease-out]" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowQR(false)}
+              className="absolute top-3 right-3 z-10 bg-surface/80 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-error hover:text-on-error transition-all hover:scale-110"
+            >
+              <span className="material-symbols-outlined">close</span>
+            </button>
+            <img src="/linktree.jpeg" alt="Linktree QR Code" className="w-full h-auto" />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
