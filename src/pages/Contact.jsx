@@ -94,7 +94,7 @@ const Contact = () => {
         <div className="contact-right flex flex-col space-y-8 mt-4">
           
           {/* Map Placeholder */}
-          <a href="https://maps.google.com/?q=Bihar+Institute+of+Technology+Patna" target="_blank" rel="noopener noreferrer" className="map-container relative w-full h-[280px] rounded-lg overflow-hidden group block cursor-pointer">
+          <a href="https://maps.app.goo.gl/GxnZsdpVK1A74P126" target="_blank" rel="noopener noreferrer" className="map-container relative w-full h-[280px] rounded-lg overflow-hidden group block cursor-pointer">
             <div className="absolute inset-0 bg-surface-container-highest animate-pulse"></div>
             <img alt="Location Map" className="map-img w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwORt6eRH4HKk1bX6G_-BZS7kGFA5GaU1Sda8yRU2qgy4gZirOdG4dPLc5sU66CnEDcu31ToAtzjgW1jByJnIrAXkmPlKKbKXf_rXYJqHOKIE5lLSIFFYfpux1HW8WMk28uGfQffhsSOc2HiwWbt6oLAvmJwUTkIDfHNjyyqWYAkXYbMJ_6nvUSsR1KLC2CZLDCsyXdQaz-LfcyCmXYAjEV2_qBoNXtLbnoaP1dmgkKdo1__xxEY8JeM0SXhDSlzSlbeGBh0PW4q22"/>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>

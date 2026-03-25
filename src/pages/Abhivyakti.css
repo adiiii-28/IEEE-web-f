@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&display=swap');
+
+.tron-abhi {
+  --tron-bg-a: #030711;
+  --tron-bg-b: #061426;
+  --tron-neon: #00f7ff;
+  --tron-neon-soft: #9ffaff;
+  --tron-border: rgba(0, 247, 255, 0.35);
+  --tron-panel: rgba(5, 20, 40, 0.64);
+  font-family: 'Orbitron', sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(0, 186, 255, 0.23), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 209, 0.16), transparent 26%),
+    linear-gradient(180deg, var(--tron-bg-b) 0%, var(--tron-bg-a) 60%, #02060d 100%);
+}
+
+.tron-title {
+  color: var(--tron-neon-soft);
+  text-shadow: 0 0 14px rgba(0, 247, 255, 0.6), 0 0 40px rgba(0, 247, 255, 0.25);
+}
+
+.abhi-tab {
+  border-radius: 999px;
+  border: 1px solid rgba(120, 137, 162, 0.35);
+  padding: 0.48rem 1rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 180ms ease;
+  white-space: nowrap;
+}
+
+.abhi-tab-inactive {
+  color: var(--color-on-surface-variant-val);
+  background: var(--color-surface-container-low-val);
+}
+
+.abhi-tab-inactive:hover {
+  border-color: rgba(0, 247, 255, 0.4);
+}
+
+.abhi-tab-active-tron {
+  color: #021a24;
+  border-color: rgba(126, 255, 255, 0.8);
+  background: linear-gradient(90deg, #8bffff, #00f7ff);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.38);
+}
+
+.abhi-tab-active-normal {
+  color: var(--color-on-surface-val);
+  border-color: var(--color-outline-variant-val);
+  background: var(--color-surface-container-high-val);
+}
+
+.tron-stat {
+  border: 1px solid var(--tron-border);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(0, 248, 255, 0.14), var(--tron-panel));
+  padding: 1rem;
+  box-shadow: inset 0 0 30px rgba(0, 196, 255, 0.08), 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.tron-stat:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 247, 255, 0.65);
+  box-shadow: inset 0 0 30px rgba(0, 196, 255, 0.12), 0 14px 36px rgba(0, 247, 255, 0.18);
+}
+
+.tron-stat-value {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  line-height: 1;
+  color: var(--tron-neon);
+  text-shadow: 0 0 16px rgba(0, 247, 255, 0.4);
+}
+
+.tron-stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: rgba(185, 249, 255, 0.9);
+}
+
+.tron-card {
+  border: 1px solid var(--tron-border);
+  border-radius: 16px;
+  background: linear-gradient(170deg, rgba(0, 247, 255, 0.08), rgba(4, 14, 30, 0.9));
+  padding: 1.2rem;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.tron-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 247, 255, 0.72);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45), 0 0 24px rgba(0, 247, 255, 0.22);
+}
+
+.tron-card-code {
+  color: rgba(161, 252, 255, 0.95);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
+.tron-card-title {
+  margin-top: 0.5rem;
+  color: var(--tron-neon-soft);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.tron-card-desc {
+  margin-top: 0.75rem;
+  color: rgba(202, 251, 255, 0.78);
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+.tron-crew-card {
+  border: 1px solid rgba(0, 247, 255, 0.36);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(0, 247, 255, 0.1), rgba(3, 14, 29, 0.82));
+  padding: 1rem;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.tron-crew-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 247, 255, 0.62);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 247, 255, 0.18);
+}
+
+.tron-crew-role {
+  color: rgba(160, 248, 255, 0.8);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.tron-crew-name {
+  margin-top: 0.5rem;
+  color: #e2fdff;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.tron-ticket-panel {
+  border: 1px solid rgba(0, 247, 255, 0.45);
+  border-radius: 18px;
+  background:
+    linear-gradient(160deg, rgba(0, 247, 255, 0.1), rgba(4, 12, 25, 0.94)),
+    radial-gradient(circle at 80% 20%, rgba(0, 247, 255, 0.25), transparent 38%);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.tron-btn {
+  border-radius: 999px;
+  border: 1px solid var(--tron-border);
+  padding: 0.62rem 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.tron-btn:hover {
+  transform: translateY(-2px);
+}
+
+.tron-btn-primary {
+  color: #01141f;
+  background: linear-gradient(90deg, #7effff, #00f7ff);
+  border-color: rgba(126, 255, 255, 0.85);
+  box-shadow: 0 0 26px rgba(0, 247, 255, 0.4);
+}
+
+.tron-btn-secondary {
+  color: var(--tron-neon-soft);
+  background: rgba(0, 247, 255, 0.08);
+}
+
+

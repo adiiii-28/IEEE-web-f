@@ -328,50 +328,50 @@ const Home = () => {
           {/* Event Card 1 */}
           <div className="event-card min-w-[350px] md:min-w-[400px] bg-surface-container-low rounded-lg overflow-hidden group hover:-translate-y-2 transition-transform duration-500 hover:shadow-[0_10px_40px_-10px_rgba(60,215,255,0.2)]">
             <div className="h-56 relative overflow-hidden">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpbQZjY9ZPaJPn4Um5rwXuBhUcPqxyWgFLHxTQze6XoieUEceGIPF8AwLDbqmMH2tp-k-26crekFY2giXfWxr_RT6JiJlyFlpGd6ucdu72Dn-tZzoOSCTn750_dCzpilSZxNnCYyYiU-Q-t88h65GLXUlRG_184rx1tYw1mIG-mU8d-URGeQ-CrGmtLx5SjjdYZK_X6k_XJlKPOj8e6qQJnNI4FCNsGps5IWCAwA9rBYF4gHeLHWPUXrTkaF63sm5pfIjlBE2B6K84"/>
-              <div className="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Workshop</div>
+              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="robo soccer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsQm5TPTvvU6upcT6a9lk_4IpJWp7d_H9r6R5l2WZeEH5wvwHuBMuhcr71pWgYi2Fqnrdk0cMIaLA2fBTMnRabmENqzPM-yG6rffCmbPe1m4gtmpHZeQts_sdQDQLoh3YJU8Qtd3XRE-nfq-fh_FqMbFIIWN4bO-jdorTjYxCjoL11AdpdGAt5iG5sdasZbtd_38qYLpLHzK7OK9YIYruaL_Xp4JVCME6sUG0G4Jye82_JZ8H6DVQ1EL9c8j9sXZlvf5bdtQaDqAW3"/>
+              <div className="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Competition</div>
             </div>
             <div className="p-8">
               <div className="flex gap-4 mb-4 text-xs text-on-surface-variant font-medium">
-                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">calendar_today</span> Oct 12, 2024</span>
-                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">location_on</span> BITP Hall A</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">calendar_today</span> March 2026</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">location_on</span> Sports Ground</span>
               </div>
-              <h4 className="text-xl font-bold mb-4 group-hover:text-tertiary transition-colors text-on-surface">Cybersecurity Essentials</h4>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Hands-on session on protecting digital assets and networking security protocols.</p>
-              <button className="text-sm font-bold border-b border-outline-variant/30 pb-1 hover:border-tertiary transition-all text-on-surface">Learn More</button>
+              <h4 className="text-xl font-bold mb-4 group-hover:text-secondary transition-colors text-on-surface">Robo Soccer</h4>
+              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Autonomous soccer robots equipped with advanced AI competing in thrilling matches. A showcase of robotics and machine learning.</p>
+              <button className="text-sm font-bold border-b border-outline-variant/30 pb-1 hover:border-secondary transition-all text-on-surface">Learn More</button>
             </div>
           </div>
           
           {/* Event Card 2 */}
           <div className="event-card min-w-[350px] md:min-w-[400px] bg-surface-container-low rounded-lg overflow-hidden group hover:-translate-y-2 transition-transform duration-500 hover:shadow-[0_10px_40px_-10px_rgba(148,204,255,0.2)]">
             <div className="h-56 relative overflow-hidden">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="robotics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsQm5TPTvvU6upcT6a9lk_4IpJWp7d_H9r6R5l2WZeEH5wvwHuBMuhcr71pWgYi2Fqnrdk0cMIaLA2fBTMnRabmENqzPM-yG6rffCmbPe1m4gtmpHZeQts_sdQDQLoh3YJU8Qtd3XRE-nfq-fh_FqMbFIIWN4bO-jdorTjYxCjoL11AdpdGAt5iG5sdasZbtd_38qYLpLHzK7OK9YIYruaL_Xp4JVCME6sUG0G4Jye82_JZ8H6DVQ1EL9c8j9sXZlvf5bdtQaDqAW3"/>
-              <div className="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Competition</div>
+              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="pcb workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpbQZjY9ZPaJPn4Um5rwXuBhUcPqxyWgFLHxTQze6XoieUEceGIPF8AwLDbqmMH2tp-k-26crekFY2giXfWxr_RT6JiJlyFlpGd6ucdu72Dn-tZzoOSCTn750_dCzpilSZxNnCYyYiU-Q-t88h65GLXUlRG_184rx1tYw1mIG-mU8d-URGeQ-CrGmtLx5SjjdYZK_X6k_XJlKPOj8e6qQJnNI4FCNsGps5IWCAwA9rBYF4gHeLHWPUXrTkaF63sm5pfIjlBE2B6K84"/>
+              <div className="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Workshop</div>
             </div>
             <div className="p-8">
               <div className="flex gap-4 mb-4 text-xs text-on-surface-variant font-medium">
-                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">calendar_today</span> Oct 28, 2024</span>
-                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">location_on</span> Robotics Lab</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">calendar_today</span> March 2026</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">location_on</span> Electronics Lab</span>
               </div>
-              <h4 className="text-xl font-bold mb-4 group-hover:text-secondary transition-colors text-on-surface">Robo-Race Challenge</h4>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Build and race your custom autonomous vehicles through complex obstacles.</p>
-              <button className="text-sm font-bold border-b border-outline-variant/30 pb-1 hover:border-secondary transition-all text-on-surface">Learn More</button>
+              <h4 className="text-xl font-bold mb-4 group-hover:text-tertiary transition-colors text-on-surface">PCB Workshop</h4>
+              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Learn PCB design fundamentals from industry experts. Hands-on training in circuit design, prototyping, and manufacturing.</p>
+              <button className="text-sm font-bold border-b border-outline-variant/30 pb-1 hover:border-tertiary transition-all text-on-surface">Learn More</button>
             </div>
           </div>
           
           {/* Event Card 3 */}
           <div className="event-card min-w-[350px] md:min-w-[400px] bg-surface-container-low rounded-lg overflow-hidden group hover:-translate-y-2 transition-transform duration-500 hover:shadow-[0_10px_40px_-10px_rgba(60,215,255,0.2)]">
             <div className="h-56 relative overflow-hidden">
-              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="ai ethics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK4CSVyyLluwUHDR-Yw0hshdQ4jE65TFQYPqoDJsPDA1UvmKlu5Jl7zVvdS7aTkG5Ox24HnCLfzZMw-JkB3LVw9x8k-AESzQo4NxW7ggF9zKnXkF5zsrIzLVZI9nW_Wszjfqf7GoDC_HIZINuTNrdT7eq5FkpyiTldApXmWvyoY2IthCJIz1NQaGZ6XNr3XriJrdcFW7CtS0haniVIgwN_5gzxBojfeCXjOMR3fF567pbBEVApUYpC2X2jP-ACtY9p6LWY8fLmEhB5"/>
-              <div className="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Seminar</div>
+              <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="linux workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK4CSVyyLluwUHDR-Yw0hshdQ4jE65TFQYPqoDJsPDA1UvmKlu5Jl7zVvdS7aTkG5Ox24HnCLfzZMw-JkB3LVw9x8k-AESzQo4NxW7ggF9zKnXkF5zsrIzLVZI9nW_Wszjfqf7GoDC_HIZINuTNrdT7eq5FkpyiTldApXmWvyoY2IthCJIz1NQaGZ6XNr3XriJrdcFW7CtS0haniVIgwN_5gzxBojfeCXjOMR3fF567pbBEVApUYpC2X2jP-ACtY9p6LWY8fLmEhB5"/>
+              <div className="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Workshop</div>
             </div>
             <div className="p-8">
               <div className="flex gap-4 mb-4 text-xs text-on-surface-variant font-medium">
-                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">calendar_today</span> Nov 05, 2024</span>
-                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">location_on</span> Main Auditorium</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">calendar_today</span> March 2026</span>
+                <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">location_on</span> Computer Lab</span>
               </div>
-              <h4 className="text-xl font-bold mb-4 group-hover:text-tertiary transition-colors text-on-surface">Future of AI Ethics</h4>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Expert panel discussion on the socio-technical implications of generative models.</p>
+              <h4 className="text-xl font-bold mb-4 group-hover:text-tertiary transition-colors text-on-surface">Linux Workshop with ML</h4>
+              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Master Linux fundamentals and dive into Machine Learning applications. Perfect for aspiring data scientists and engineers.</p>
               <button className="text-sm font-bold border-b border-outline-variant/30 pb-1 hover:border-tertiary transition-all text-on-surface">Learn More</button>
             </div>
           </div>
@@ -430,10 +430,8 @@ const Home = () => {
               {/* Image & Title (Right side) */}
               <div className="counsellor-img md:col-span-5 lg:col-span-4 flex flex-col pt-8 md:pt-0 xl:pr-8">
                 <div className="w-full aspect-[4/5] overflow-hidden bg-surface-container-highest relative group shadow-lg border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(60,215,255,0.15)] transition-shadow duration-500">
+                  <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Dr. Mayank Singh" src="/mayank-sir.jpeg"/>
                   <div className="absolute inset-0 bg-gradient-to-tr from-tertiary/10 to-transparent group-hover:from-tertiary/20 transition-colors duration-500 z-10"></div>
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#151b2d] z-0">
-                     <span className="material-symbols-outlined text-6xl text-on-surface-variant/30 group-hover:scale-110 transition-transform duration-500">person</span>
-                  </div>
                 </div>
                 <div className="mt-6">
                   <h5 className="text-2xl font-bold text-on-surface">Dr. Mayank Singh</h5>
