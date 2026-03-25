@@ -10,23 +10,22 @@ const Members = () => {
   const alumniHeaderRef = useRef(null);
 
   const members = [
-    { name: "Pranjal Bhattacharya", role: "Chair Person" },
-    { name: "Somanath Mahto", role: "Vice Chair Person" },
-    { name: "Harishta Chaubey", role: "Secretary" },
-    { name: "Rajdeep Das", role: "Co Secretary" },
-    { name: "Md Mehran Ansari", role: "Webmaster" },
-    { name: "Aayush Arya", role: "Co Webmaster" },
-    { name: "Ronak Sharma", role: "Treasurer" },
-    { name: "Sahil Gurg", role: "Co Treasurer" }
+    { name: "Pranjal Bhattacharya", role: "Chair Person", image: "", linkedin: "", email: "" },
+    { name: "Somanath Mahto", role: "Vice Chair Person", image: "", linkedin: "", email: "" },
+    { name: "Harishta Chaubey", role: "Secretary", image: "", linkedin: "", email: "" },
+    { name: "Rajdeep Das", role: "Co Secretary", image: "", linkedin: "", email: "" },
+    { name: "Aayush Arya", role: "Technical", image: "", linkedin: "", email: "" },
+    { name: "Ronak Sharma", role: "Treasurer", image: "", linkedin: "", email: "" },
+    { name: "Sahil Gurg", role: "Co Treasurer", image: "", linkedin: "", email: "" }
   ];
 
   const alumni = [
-    { name: "Arnav Shivam", role: "Chair Person" },
-    { name: "Sneha Sharma", role: "Vice Chair Person" },
-    { name: "Asman Kumari", role: "Secretary" },
-    { name: "Syed Fahad Ahmed", role: "Treasurer" },
-    { name: "Pushkar Kumar", role: "Technical Coordinator" },
-    { name: "Meenakshi Sinha", role: "Design & Editing Coordinator" }
+    { name: "Arnav Shivam", role: "Chair Person", image: "", linkedin: "", email: "" },
+    { name: "Sneha Sharma", role: "Vice Chair Person", image: "", linkedin: "", email: "" },
+    { name: "Asman Kumari", role: "Secretary", image: "", linkedin: "", email: "" },
+    { name: "Syed Fahad Ahmed", role: "Treasurer", image: "", linkedin: "", email: "" },
+    { name: "Pushkar Kumar", role: "Technical Coordinator", image: "", linkedin: "", email: "" },
+    { name: "Meenakshi Sinha", role: "Design & Editing Coordinator", image: "", linkedin: "", email: "" }
   ];
 
   useEffect(() => {
@@ -70,7 +69,7 @@ const Members = () => {
     <main className="pt-24 md:pt-32 pb-24 px-4 md:px-6 max-w-7xl mx-auto">
       {/* Page Header */}
       <header ref={headerRef} className="mb-12 md:mb-16">
-        <h1 className="members-title text-4xl md:text-7xl font-bold tracking-[-0.02em] text-primary mb-6 uppercase leading-tight perspective-[800px]">
+        <h1 className="members-title text-4xl md:text-7xl font-bold tracking-[-0.02em] text-primary mb-6 uppercase leading-tight perspective-midrange">
           EXECUTIVE COMMITTEE
         </h1>
         <p className="members-desc text-on-surface-variant text-base md:text-xl max-w-2xl font-light leading-relaxed opacity-0">
@@ -81,8 +80,15 @@ const Members = () => {
       {/* Current Member Grid */}
       <div className="flex flex-wrap justify-center gap-4 md:gap-8">
         {members.map((member, index) => (
-          <div key={index} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-[160px] max-w-xs flex-shrink-0">
-            <MemberCard name={member.name} role={member.role} index={index} />
+          <div key={index} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-40 max-w-xs shrink-0">
+            <MemberCard
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              linkedin={member.linkedin}
+              email={member.email}
+              index={index}
+            />
           </div>
         ))}
       </div>
@@ -99,8 +105,15 @@ const Members = () => {
         </header>
         <div className="flex flex-wrap justify-center gap-4 md:gap-8">
           {alumni.map((member, index) => (
-            <div key={index} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-[160px] max-w-xs flex-shrink-0 opacity-75 hover:opacity-100 transition-opacity">
-              <MemberCard name={member.name} role={member.role} index={index} />
+            <div key={index} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-40 max-w-xs shrink-0 opacity-75 hover:opacity-100 transition-opacity">
+              <MemberCard
+                name={member.name}
+                role={member.role}
+                image={member.image}
+                linkedin={member.linkedin}
+                email={member.email}
+                index={index}
+              />
             </div>
           ))}
         </div>

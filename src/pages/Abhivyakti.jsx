@@ -26,18 +26,17 @@ const Abhivyakti = () => {
         { name: 'Cultural Night', desc: 'Live music performances, dance battles, and stand-up comedy to close the fest.' },
       ],
       team: [
-        { name: "Pranjal Bhattacharya", role: "Chair" },
-        { name: "Somanath Mahto", role: "Vice Chair" },
-        { name: "Harishta Chaubey", role: "Secretary" },
-        { name: "Rajdeep Das", role: "Co Secretary" },
-        { name: "Md Mehran Ansari", role: "Webmaster" },
-        { name: "Ayush Arya", role: "Co Webmaster" },
-        { name: "Ronak Sharma", role: "Treasurer" },
-        { name: "Sahil Gurg", role: "Co Treasurer" },
+        { name: "Pranjal Bhattacharya", role: "Chair", image: "", linkedin: "", email: "" },
+        { name: "Somanath Mahto", role: "Vice Chair", image: "", linkedin: "", email: "" },
+        { name: "Harishta Chaubey", role: "Secretary", image: "", linkedin: "", email: "" },
+        { name: "Rajdeep Das", role: "Co Secretary", image: "", linkedin: "", email: "" },
+        { name: "Aayush Arya", role: "Technical", image: "", linkedin: "", email: "" },
+        { name: "Ronak Sharma", role: "Treasurer", image: "", linkedin: "", email: "" },
+        { name: "Sahil Gurg", role: "Co Treasurer", image: "", linkedin: "", email: "" },
       ],
     },
     '2025': {
-      dates: '2025',
+      dates: 'March 27–29, 2025',
       status: 'past',
       tagline: 'Successfully Concluded',
       description: 'Abhivyakti 2025 brought together students from across the region for a celebration of creativity meeting technology — featuring competitions, tech talks, hackathons, and cultural showcases.',
@@ -50,13 +49,12 @@ const Abhivyakti = () => {
         { name: 'LinkedIn Career Insights', desc: 'Session on internships, networking, and LinkedIn optimization.' },
       ],
       team: [
-        { name: "Arnav Shivam", role: "Chair Person" },
-        { name: "Sneha Sharma", role: "Vice Chair Person" },
-        { name: "Asman Kumari", role: "Secretary" },
-        { name: "Syed Fahad Ahmed", role: "Treasurer" },
-        { name: "Pushkar Kumar", role: "Technical Coordinator" },
-        { name: "Md Mehran Ansari", role: "Webmaster" },
-        { name: "Meenakshi Sinha", role: "Design & Editing Coordinator" },
+        { name: "Arnav Shivam", role: "Chair Person", image: "", linkedin: "", email: "" },
+        { name: "Sneha Sharma", role: "Vice Chair Person", image: "", linkedin: "", email: "" },
+        { name: "Asman Kumari", role: "Secretary", image: "", linkedin: "", email: "" },
+        { name: "Syed Fahad Ahmed", role: "Treasurer", image: "", linkedin: "", email: "" },
+        { name: "Pushkar Kumar", role: "Technical Coordinator", image: "", linkedin: "", email: "" },
+        { name: "Meenakshi Sinha", role: "Design & Editing Coordinator", image: "", linkedin: "", email: "" },
       ],
     },
     '2024': {
@@ -173,7 +171,7 @@ const Abhivyakti = () => {
     <main className="pt-24 md:pt-32 pb-24 px-4 md:px-6 max-w-7xl mx-auto">
       {/* Page Header */}
       <header ref={headerRef} className="mb-12 md:mb-16">
-        <h1 className="abhi-title text-4xl md:text-7xl font-bold tracking-[-0.02em] text-primary mb-6 uppercase leading-tight perspective-[800px]">
+        <h1 className="abhi-title text-4xl md:text-7xl font-bold tracking-[-0.02em] text-primary mb-6 uppercase leading-tight perspective-midrange">
           ABHIVYAKTI
         </h1>
         <p className="abhi-desc text-on-surface-variant text-base md:text-xl max-w-2xl font-light leading-relaxed opacity-0">
@@ -187,15 +185,15 @@ const Abhivyakti = () => {
           <button
             key={tab}
             onClick={() => handleTabSwitch(tab)}
-            className={`relative px-6 py-2.5 rounded-xl font-bold text-sm tracking-wider uppercase transition-all duration-300 flex-shrink-0 ${
+            className={`relative px-6 py-2.5 rounded-xl font-bold text-sm tracking-wider uppercase transition-all duration-300 shrink-0 ${
               activeTab === tab
-                ? 'bg-gradient-to-r from-primary-container to-secondary-container text-on-surface shadow-[0_0_20px_rgba(60,215,255,0.15)]'
+                ? 'bg-linear-to-r from-primary-container to-secondary-container text-on-surface shadow-[0_0_20px_rgba(60,215,255,0.15)]'
                 : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'
             }`}
           >
             {tab}
             {activeTab === tab && (
-              <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 w-8 h-[3px] bg-tertiary rounded-full" />
+              <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-8 h-0.75 bg-tertiary rounded-full" />
             )}
             {yearData[tab].status === 'live' && tab !== activeTab && (
               <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
@@ -255,7 +253,7 @@ const Abhivyakti = () => {
                 className="group p-6 rounded-lg bg-surface-container-low border border-outline-variant/10 hover:border-tertiary/30 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(60,215,255,0.15)] transition-all duration-500"
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="bg-tertiary/10 p-2 rounded-lg flex-shrink-0 group-hover:bg-tertiary/20 transition-colors">
+                  <div className="bg-tertiary/10 p-2 rounded-lg shrink-0 group-hover:bg-tertiary/20 transition-colors">
                     <span className="material-symbols-outlined text-tertiary text-lg">bolt</span>
                   </div>
                   <h4 className="text-on-surface font-semibold text-base leading-snug">{event.name}</h4>
@@ -277,8 +275,15 @@ const Abhivyakti = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8">
               {currentData.team.map((member, index) => (
-                <div key={`${activeTab}-${index}`} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-[160px] max-w-xs flex-shrink-0">
-                  <MemberCard name={member.name} role={member.role} index={index} />
+                <div key={`${activeTab}-${index}`} className="w-[calc(50%-0.5rem)] md:w-[calc(25%-1.5rem)] min-w-40 max-w-xs shrink-0">
+                  <MemberCard
+                    name={member.name}
+                    role={member.role}
+                    image={member.image}
+                    linkedin={member.linkedin}
+                    email={member.email}
+                    index={index}
+                  />
                 </div>
               ))}
             </div>
