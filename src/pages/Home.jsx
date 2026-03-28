@@ -386,19 +386,19 @@ const Home = () => {
         </div>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:auto-rows-[250px] gallery-grid">
           <div className="gallery-item col-span-2 md:row-span-2 rounded-lg overflow-hidden relative group cursor-pointer">
-            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 1" src="\public\gallery\poster.jpeg"/>
+            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 1" src="https://i.ibb.co/m5dgppGY/poster.jpg"/>
             <div className="absolute inset-0 bg-linear-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
               <p className="text-sm font-bold tracking-wider text-on-surface">Annual Technical Summit</p>
             </div>
           </div>
           <div className="gallery-item col-span-1 rounded-lg overflow-hidden relative group cursor-pointer">
-            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 2" src="\public\gallery\home2.jpeg"/>
+            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 2" src="https://i.ibb.co/7JsGrDDw/home2.jpg"/>
           </div>
           <div className="gallery-item col-span-1 rounded-lg overflow-hidden relative group cursor-pointer">
-            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 3" src="\public\gallery\home1.jpeg"/>
+            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 3" src="https://i.ibb.co/cSp8nJK8/home1.jpg"/>
           </div>
           <div className="gallery-item col-span-2 rounded-lg overflow-hidden relative group cursor-pointer">
-            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 4" src="\public\gallery\home3.jpeg"/>
+            <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="gallery 4" src="https://i.ibb.co/HZWG6m9/home3.jpg"/>
             <div className="absolute inset-0 bg-linear-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
               <p className="text-sm font-bold tracking-wider text-on-surface">Student Membership Drive</p>
             </div>
